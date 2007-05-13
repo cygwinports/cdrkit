@@ -1,0 +1,78 @@
+DESCRIPTION="CD/DVD recording suite"
+HOMEPAGE="http://cdrkit.org/"
+SRC_URI="http://cdrkit.org/releases/${P}.tar.gz"
+
+MAKEOPTS+=" -j1"
+
+src_compile() {
+	check_prog_req cmake
+
+	cd ${B}
+	cygcmake
+	cygmake
+
+	mkdir ${B}/3rd-party/zisofs_tools
+	cd ${B}/3rd-party/zisofs_tools
+	lndirs ${S}/3rd-party/zisofs_tools
+	CYGCONF_SOURCE=${S}/3rd-party/zisofs_tools cygconf
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+	dodoc Changelog FORK START
+
+	dosym wodim /usr/bin/cdrecord
+	dosym genisoimage /usr/bin/mkisofs
+	dosym icedax /usr/bin/cdda2wav
+	dosym readom /usr/bin/readcd
+	dosym wodim.1.gz /usr/share/man/man1/cdrecord.1.gz
+	dosym genisoimage.1.gz /usr/share/man/man1/mkisofs.1.gz
+	dosym icedax.1.gz /usr/share/man/man1/cdda2wav.1.gz
+	dosym readom.1.gz /usr/share/man/man1/readcd.1.gz
+
+	cd ${S}/doc/READMEs
+	dodoc README*
+
+	cd ${S}/doc/wodim
+	dodoc README*
+
+	cd ${S}/doc/genisoimage
+	docinto genisoimage
+	dodoc *
+
+	cd ${S}/doc/icedax
+	docinto icedax
+	dodoc FAQ Frontends HOWTOUSE NEEDED README TODO
+
+	cd ${S}/doc/plattforms
+	docinto platforms
+	dodoc README.{parallel,win32}
+
+	cd ${S}/3rd-party/dirsplit
+	docinto dirsplit
+	dodoc README
+
+	cd ${S}/3rd-party/geteltorito
+	newbin geteltorito.pl geteltorito
+	docinto geteltorito
+	newdoc README.geteltorito README
+
+	cd ${B}/3rd-party/zisofs_tools
+	cyginstall INSTALLROOT=${D}
+	docinto mkzftree
+	dodoc CHANGES README
+
+	cd ${S}
+	insinto /etc
+	newins wodim/wodim.dfl wodim.conf
+	newins netscsid/netscsid.dfl netscsid.conf
+
+#	cd ${S}
+#	insinto /usr/include/scsilib
+#	doins include/*.h
+#	insinto /usr/include/scsilib/usal
+#	doins include/usal/*.h
+#	dosym usal /usr/include/scsilib/scg
+}

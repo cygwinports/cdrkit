@@ -1,0 +1,157 @@
+cdrkit
+------------------------------------------
+cdrkit is a suite of programs for recording CDs and DVDs, blanking CD-RW 
+media, creating ISO-9660 filesystem images, extracting audio CD data, 
+and more. The programs included in the cdrkit package were originally 
+derived from several sources, most notably mkisofs, cdda2wav, and 
+cdrecord.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  file-4.20-1
+  libiconv2-1.11-1
+  perl
+  zlib-1.2.3-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  cmake-2.4.6-1
+  cygport-0.3.1-1
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http://cdrkit.org/
+
+Canonical download:
+  http://cdrkit.org/releases/
+
+-------------------------------------------
+
+Build instructions:
+  unpack cdrkit-1.1.6-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./cdrkit-1.1.6-X.cygport all
+
+This will create:
+  /usr/src/cdrkit-1.1.6-X-src.tar.bz2
+  /usr/src/cdrkit-1.1.6-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/netscsid.conf
+  /etc/wodim.conf
+  /usr/bin/cdda2mp3
+  /usr/bin/cdda2ogg
+  /usr/bin/cdda2wav.exe
+  /usr/bin/cdrecord.exe
+  /usr/bin/devdump.exe
+  /usr/bin/dirsplit
+  /usr/bin/genisoimage.exe
+  /usr/bin/geteltorito
+  /usr/bin/icedax.exe
+  /usr/bin/isodebug.exe
+  /usr/bin/isodump.exe
+  /usr/bin/isoinfo.exe
+  /usr/bin/isovfy.exe
+  /usr/bin/mkisofs.exe
+  /usr/bin/mkzftree.exe
+  /usr/bin/pitchplay
+  /usr/bin/readcd.exe
+  /usr/bin/readmult
+  /usr/bin/readom.exe
+  /usr/bin/wodim.exe
+  /usr/sbin/netscsid.exe
+  /usr/share/doc/Cygwin/cdrkit-1.1.6.README
+  /usr/share/doc/cdrkit-1.1.6/COPYING
+  /usr/share/doc/cdrkit-1.1.6/ChangeLog
+  /usr/share/doc/cdrkit-1.1.6/FAQ
+  /usr/share/doc/cdrkit-1.1.6/INSTALL
+  /usr/share/doc/cdrkit-1.1.6/README.ATAPI
+  /usr/share/doc/cdrkit-1.1.6/README.ATAPI.setup
+  /usr/share/doc/cdrkit-1.1.6/README.DiskT@2
+  /usr/share/doc/cdrkit-1.1.6/README.WORM
+  /usr/share/doc/cdrkit-1.1.6/README.audio
+  /usr/share/doc/cdrkit-1.1.6/README.cdplus
+  /usr/share/doc/cdrkit-1.1.6/README.cdrw
+  /usr/share/doc/cdrkit-1.1.6/README.cdtext
+  /usr/share/doc/cdrkit-1.1.6/README.clone
+  /usr/share/doc/cdrkit-1.1.6/README.copy
+  /usr/share/doc/cdrkit-1.1.6/README.multi
+  /usr/share/doc/cdrkit-1.1.6/README.netscsid
+  /usr/share/doc/cdrkit-1.1.6/README.raw
+  /usr/share/doc/cdrkit-1.1.6/README.sony
+  /usr/share/doc/cdrkit-1.1.6/README.suidroot
+  /usr/share/doc/cdrkit-1.1.6/README.verify
+  /usr/share/doc/cdrkit-1.1.6/TODO
+  /usr/share/doc/cdrkit-1.1.6/dirsplit/README
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.alphaboot
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.compression
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.eltorito
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.graft_dirs
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.hfs_boot
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.hfs_magic
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.hide
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.hppaboot
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.joliet
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.macosx
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.mipsboot
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.mipselboot
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.mkhybrid
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.prep_boot
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.releasenotes
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.rootinfo
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.session
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.sort
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.sparcboot
+  /usr/share/doc/cdrkit-1.1.6/genisoimage/README.sunx86boot
+  /usr/share/doc/cdrkit-1.1.6/geteltorito/README
+  /usr/share/doc/cdrkit-1.1.6/icedax/FAQ
+  /usr/share/doc/cdrkit-1.1.6/icedax/Frontends
+  /usr/share/doc/cdrkit-1.1.6/icedax/HOWTOUSE
+  /usr/share/doc/cdrkit-1.1.6/icedax/NEEDED
+  /usr/share/doc/cdrkit-1.1.6/icedax/README
+  /usr/share/doc/cdrkit-1.1.6/icedax/TODO
+  /usr/share/doc/cdrkit-1.1.6/mkzftree/CHANGES
+  /usr/share/doc/cdrkit-1.1.6/mkzftree/README
+  /usr/share/doc/cdrkit-1.1.6/platforms/README.parallel
+  /usr/share/doc/cdrkit-1.1.6/platforms/README.win32
+  /usr/share/man/man1/cdda2ogg.1.gz
+  /usr/share/man/man1/cdda2wav.1.gz
+  /usr/share/man/man1/cdrecord.1.gz
+  /usr/share/man/man1/devdump.1.gz
+  /usr/share/man/man1/dirsplit.1.gz
+  /usr/share/man/man1/genisoimage.1.gz
+  /usr/share/man/man1/icedax.1.gz
+  /usr/share/man/man1/isodebug.1.gz
+  /usr/share/man/man1/isodump.1.gz
+  /usr/share/man/man1/isoinfo.1.gz
+  /usr/share/man/man1/isovfy.1.gz
+  /usr/share/man/man1/list_audio_tracks.1.gz
+  /usr/share/man/man1/mkisofs.1.gz
+  /usr/share/man/man1/mkzftree.1.gz
+  /usr/share/man/man1/pitchplay.1.gz
+  /usr/share/man/man1/readcd.1.gz
+  /usr/share/man/man1/readmult.1.gz
+  /usr/share/man/man1/readom.1.gz
+  /usr/share/man/man1/wodim.1.gz
+  /usr/share/man/man5/genisoimagerc.5.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.1.6-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
