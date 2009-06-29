@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin file libiconv2 perl zlib
+requires: file libiconv2 perl zlib
 sdesc: "CD/DVD recording suite"
 ldesc: "cdrkit is a suite of programs for recording CDs and DVDs, 
 blanking CD-RW media, creating ISO-9660 filesystem images, extracting 
